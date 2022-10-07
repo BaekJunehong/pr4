@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>움직이는 글자</title>
+	<style>
+	div{	
+		display : inline-block; 
+		color : white;
+		padding : 15px;
+		height : 55px;
+		font-size : 35px;
+		border-radius : 100px;
+		text-align : center;
+		transition : 1s;
+	}
+	
+	div.www{
+		background-color : black;
+		position : fixed; 
+		width : 150px;
+		left : 15px; 
+		top : 15px;
+		animation-name : www_action; 
+		animation-duration : 5s; 
+		animation-iteration-count : infinite; 
+	}
+	div.html5{
+		background-color : red;
+		position : fixed; 
+		width : 150px;
+		right : 15px; 
+		top : 15px;
+		animation-name : html_action; 
+		animation-duration : 5s; 
+		animation-iteration-count : infinite; 
+	}
+	div.javascript{
+		background-color: blue;
+		position : fixed;
+		width : 200px;
+		left : 15px; 
+		bottom : 15px;
+		animation-name : js_action; 
+		animation-duration : 5s; 
+		animation-iteration-count : infinite; 	
+	}
+	div.css3{
+		background-color : green;
+		position : fixed; 
+		width : 150px;
+		right : 15px; 
+		bottom : 15px;
+		animation-name : css_action; 
+		animation-duration : 5s; 
+		animation-iteration-count : infinite; 
+	}
+	
+	@keyframes www_action{
+		0% { left : 15px; }
+		50% { width : 550px; height : 200px; font-size : 150px; left : 1500px; }
+		100% {left : 15px; }
+	}
+	@keyframes html_action{
+		0% { right : 15px; }
+		50% { width : 550px; height : 200px; font-size : 150px; top : 750px; }
+		100% {right : 15px; }
+	}
+	@keyframes js_action{
+		0% { left : 15px; }
+		50% { width : 750px; height : 200px; font-size : 150px; bottom : 750px; }
+		100% {left : 15px; }
+	}
+	@keyframes css_action{
+		0% { right : 15px; }
+		50% { width : 550px; height : 200px; font-size : 150px; right : 1500px; }
+		100% {right : 15px; }
+	}
+	
+	div:hover{
+	transform : rotate( 180deg );
+	}
+	</style>	
+</head>
+
+<body>
+	<div class="www">WWW</div>
+	<div class="html5">HTML5</div>
+	<div class="javascript">JavaScript</div>
+	<div class="css3">CSS3</div>
+</body>
+
+</html>
